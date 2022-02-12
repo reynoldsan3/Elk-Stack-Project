@@ -40,7 +40,6 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 | Web 2              | Web Server     | 10.0.0.8    | Linux            |
 | Web 3              | Web Server     | 10.0.0.9    | Linux            |
 | Elk VM             | Elk Server     | 10.1.0.4    | Linux            |
-| Workstation        | Access Control | Public IP   | Windows          |
 
 ### Access Policies
 
