@@ -23,7 +23,7 @@ The main purpose of this network is to expose a load-balanced and monitored inst
 
 Load balancing ensures that the application will be highly available, in addition to restricting traffic to the network.
 * What aspect of security do load balancers protect?
-- Answer: Availability, Web Security and Web Traffic
+..* Answer: Availability, Web Security and Web Traffic
 
  What is the advantage of a jump box? Security, Access Control
 
