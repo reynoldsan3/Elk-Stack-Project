@@ -25,10 +25,11 @@ Load balancing ensures that the application will be highly available, in additio
 * What aspect of security do load balancers protect?
   * Answer: Availability, Web Security and Web Traffic
 
- What is the advantage of a jump box? Security, Access Control
+ * What is the advantage of a jump box?
+   * Answer: Security, Access Control
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
-- _TODO: What does Filebeat watch for?_
+- _TODO: What does Filebeat watch for?_ Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing
 - _TODO: What does Metricbeat record?_
 
 The configuration details of each machine may be found below.
