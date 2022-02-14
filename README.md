@@ -6,7 +6,7 @@ TODO: IMAGE
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml and config file may be used to install only certain pieces of it, such as Filebeat.
 
-  C:\Users\anrey\Elk-Stack-Project\ansible/install-elk2.yml
+ [Ansible PLaybook](ansible/install-elk2.yml)
 
 This document contains the following details:
 - Description of the Topologu
