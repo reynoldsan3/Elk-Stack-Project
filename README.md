@@ -61,8 +61,6 @@ Only the Elk Server machine can accept connections from the Internet. Access to 
 
 Machines within the network can only be accessed by the Docker Container that is running on the Jumpbox Provisioner.
 - _Which machine did you allow to access your ELK VM? What was its IP address?_
-  * JumpBoxProvisionser IP: 10.0.0.5 via Port 22
-  * Workstation Public IP via TCP 5601 
   * Only the Jumpbox Provisioner is allowed to access the ELK VM via SSH connection. The IP of the Jumpbox, per the above table is 10.0.0.5. Only my personal IP address can access the ELK server/Kibana page via port 5601.
 
 A summary of the access policies in place can be found in the table below.
