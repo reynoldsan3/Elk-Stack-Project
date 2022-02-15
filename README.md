@@ -2,13 +2,20 @@
 
 The files in this repository were used to configure the network depicted below.
 
-TODO: IMAGE
+
+![alt text](https://github.com/reynoldsan3/Elk-Stack-Project/blob/main/diagrams/Project%20Diagram.drawio.png "Diagram")
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml and config file may be used to install only certain pieces of it, such as Filebeat.
 
+[Ansible ELK Installation and VM Configuration](ansible/install-elk2.yml)  
+[Ansible Configuration](ansible/ansible.cfg)  
+[Filebeat Configuration](ansible/filebeat-config.yml)  
+[Filebeat Playbook](ansible/filebeat-playbook.yml)  
+[Metricbeat Configuration](ansible/metricbeat-config.yml)  
+[Metricbeat Playbook](ansible/metricbeat-playbook.yml)  
 
 This document contains the following details:
-- Description of the Topologu
+- Description of the Topology
 - Access Policies
 - ELK Configuration
   - Beats in Use
@@ -21,13 +28,17 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly available, in addition to restricting traffic to the network.
-- _TODO: What aspect of security do load balancers protect? Availability, Web Security and Web Traffic
+* What aspect of security do load balancers protect?
+  * Answer: Availability, Web Security and Web Traffic
 
- What is the advantage of a jump box? Security, Access Control
+ * What is the advantage of a jump box?
+   * Answer: Security, Access Control
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the data and system logs.
-- _TODO: What does Filebeat watch for?_
-- _TODO: What does Metricbeat record?_
+* What does Filebeat watch for?
+  * Filebeat monitors the log files or locations that you specify, collects log events, and forwards them either to Elasticsearch or Logstash for indexing
+* What does Metricbeat record?
+  * Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
 The configuration details of each machine may be found below.
 _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdown_tables) to add/remove values from the table_.
@@ -44,11 +55,13 @@ _Note: Use the [Markdown Table Generator](http://www.tablesgenerator.com/markdow
 
 The machines on the internal network are not exposed to the public Internet. 
 
-Only the _____ machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
-- _TODO: Add whitelisted IP addresses_
+Only the Elk Server machine can accept connections from the Internet. Access to this machine is only allowed from the following IP addresses:
+  * Workstation Public UP through TCP 5601
 
 Machines within the network can only be accessed by _____.
-- _TODO: Which machine did you allow to access your ELK VM? What was its IP address?_
+- _Which machine did you allow to access your ELK VM? What was its IP address?_
+  * JumpBoxProvisionser IP: 10.0.0.5 via Port 22
+  * Workstation Public IP via TCP 5601 
 
 A summary of the access policies in place can be found in the table below.
 
@@ -60,8 +73,7 @@ A summary of the access policies in place can be found in the table below.
 
 ### Elk Configuration
 
-Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
+Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because Ansible lets you quickly and easily deploy apps. You won't need to write custom code to automate your systems; you list the tasks required to be done by writing a playbook, and Ansible will figure out how to get your systems to the state you want them to be in. In other words, it frees up time and increases efficiency.
 
 The playbook implements the following tasks:
 - _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
