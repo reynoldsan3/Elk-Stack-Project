@@ -79,9 +79,11 @@ A summary of the access policies in place can be found in the table below.
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because Ansible lets you quickly and easily deploy apps. You won't need to write custom code to automate your systems; you list the tasks required to be done by writing a playbook, and Ansible will figure out how to get your systems to the state you want them to be in. In other words, it frees up time and increases efficiency.
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
-- ...
-- ...
+* Installs docker.io to the ELK machine (VM)
+* Installs pip3 (python3) to the ELK machine
+* Installs the Docker python module
+* Increase the virtual memory of the ELK machine
+* Download and launch the Docker ELK container, configuring/publishing the ports for elasticsearch, logstash, and kibana
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
@@ -89,10 +91,16 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+| Name  | IP Addresses |
+|-------|--------------|
+| Web 1 | 10.0.0.6     |
+| Web 2 | 10.0.0.8     |
+| Web 3 | 10.0.0.9     |
+| ELK   | 10.1.0.4     |
 
 We have installed the following Beats on these machines:
-- _TODO: Specify which Beats you successfully installed_
+* Filebeat
+* Metricbeat
 
 These Beats allow us to collect the following information from each machine:
 - _TODO: In 1-2 sentences, explain what kind of data each beat collects, and provide 1 example of what you expect to see. E.g., `Winlogbeat` collects Windows logs, which we use to track user logon events, etc._
