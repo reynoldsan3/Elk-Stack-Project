@@ -7,6 +7,7 @@ The files in this repository were used to configure the network depicted below.
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the yml and config file may be used to install only certain pieces of it, such as Filebeat.
 
+[Ansible Playbook](ansible/hosts)
 [Ansible ELK Installation and VM Configuration](ansible/install-elk2.yml)  
 [Ansible Hosts](ansible/hosts)  
 [Ansible Configuration](ansible/ansible.cfg)  
@@ -86,7 +87,7 @@ The playbook implements the following tasks:
 
 The following screenshot displays the result of running `docker ps` after successfully configuring the ELK instance.
 
-![TODO: Update the path with the name of your screenshot of docker ps output](Images/docker_ps_output.png)
+![alt text](https://github.com/reynoldsan3/Elk-Stack-Project/blob/main/images/Project%20Diagram.drawio.png "Diagram")
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
