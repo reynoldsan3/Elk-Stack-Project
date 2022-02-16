@@ -62,7 +62,7 @@ Only the Elk Server machine can accept connections from the Internet. Access to 
 
 Machines within the network can only be accessed by the Docker Container that is running on the Jumpbox Provisioner.
 - _Which machine did you allow to access your ELK VM? What was its IP address?_
-  * Only the Jumpbox Provisioner is allowed to access the ELK VM via SSH connection. The IP of the Jumpbox, per the above table is 10.0.0.5. Only my personal IP address can access the ELK server/Kibana page via port 5601.
+  * Only the Jumpbox Provisioner is allowed to access the ELK VM via SSH connection. Per the above table above, The IP of the Jumpbox is 10.0.0.5. Only my personal IP address can access the ELK server/Kibana page via port 5601.
 
 A summary of the access policies in place can be found in the table below.
 
@@ -104,15 +104,12 @@ We have installed the following Beats on these machines:
 
 These Beats allow us to collect the following information from each machine:
 * Filebeat monitors the logs or locations specified, collects that data, and forwards it to the ELK server  
-* Metricbeat periodically collects metric data from your target servers, this could be operating system metrics such as CPU or memory or data related to services running on the server. It can also be used to monitor other beats and ELK stack itself. Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
+* Metricbeat collects metric data from your target servers, this could be operating system metrics such as CPU or memory or data related to services running on the server. It can also be used to monitor other beats and ELK stack itself. Metricbeat takes the metrics and statistics that it collects and ships them to the output that you specify, such as Elasticsearch or Logstash.
 
 ### Using the Playbook
 In order to use the playbook, you will need to have an Ansible control node already configured. Assuming you have such a control node provisioned: 
 
 SSH into the control node and follow the steps below:
-- Copy the playbook file to /etc/ansible folder.
-- Update the configuration file to include the IP address of the ELK machine and update the hosts file to contain the IPs of the Webservers or ELK server.
+- Copy the [Ansible ELK Installation and VM Configuration](ansible/install-elk2.yml) file to /etc/ansible folder.
+- Update the configuration file to include the IP address of the ELK machine and update the [Ansible Hosts](ansible/hosts) file to contain the IPs of the Webservers or ELK server.
 - Run the playbook, and navigate to the ELK server's public IP by using --http://[your.VM.IP]:5601/app/kibana-- to check that the installation worked as expected.
-
-
-_As a **Bonus**, provide the specific commands the user will need to run to download the playbook, update the files, etc._
